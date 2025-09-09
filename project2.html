@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Best Js Project</h1>
+    <button id="start">start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    let interval;
+    const startDate = function(){
+        
+        const sayDate = function(str){
+            console.log(str,Date.now);
+        }
+        interval = setInterval(sayDate,2000,'Hi');
+    }
+
+    
+    const endDate = function(){
+        clearInterval(interval);
+    }
+    
+    document.querySelector('#start').addEventListener('click',startDate);
+    document.querySelector('#stop').addEventListener('click',endDate);
+</script>
+</html>
